@@ -1,20 +1,15 @@
 import { styled } from "@mui/material/styles";
 
-export const BpIcon = styled("span")(({ theme }) => ({
-  width: 16,
-  height: 16,
-  backgroundColor: theme.palette.mode === "dark" ? "#1c1c1c" : "#fff",
+export const ThemeRadio = styled("input")(({ theme }) => ({
+  width: 12,
+  height: 12,
+  backgroundColor: `${theme.palette.background.default}`,
+  outline: `1px solid ${theme.palette.text.primary}`,
+  border: `1px solid ${theme.palette.background.default}`,
 }));
 
-export const BpCheckedIcon = styled(BpIcon)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
-  border: `3px solid ${theme.palette.divider}`,
-
-  "&:before": {
-    display: "block",
-    width: 16,
-    height: 16,
-
-    content: '""',
-  },
+export const ThemeRadioChecked = styled(ThemeRadio)(({ theme }) => ({
+  backgroundColor: `${theme.palette.text.primary}`,
+  outline: `1px solid ${theme.palette.text.primary}`,
+  border: `2px solid ${theme.palette.background.default}`,
 }));

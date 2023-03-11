@@ -1,4 +1,5 @@
 import {
+  Box,
   createTheme,
   CssBaseline,
   FormControlLabel,
@@ -6,11 +7,11 @@ import {
   RadioGroup,
   ThemeProvider,
 } from "@mui/material";
-import React, { useMemo, useState } from "react";
-import { Routes, Route, Form } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import { BpCheckedIcon, BpIcon } from "./styles/theme/radioButton";
+import { ThemeRadioChecked, ThemeRadio } from "./styles/theme/radioButton";
 import { getDesignTokens } from "./styles/theme/theme";
 
 function App() {
@@ -30,39 +31,74 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
-      <RadioGroup row defaultValue="light">
-        <FormControlLabel
-          value="light"
-          label="light"
-          control={
-            <Radio
-              disableRipple
-              color="default"
-              checkedIcon={<BpCheckedIcon />}
-              icon={<BpIcon />}
-              onChange={colorMode.toggleColorMode}
+      <Box
+        style={{
+          display: "flex",
+          alignItems: "flex-end",
+        }}
+      >
+        <Box
+          sx={{
+            transform: "rotate(-90deg)",
+            width: "30px",
+          }}
+        >
+          <RadioGroup
+            sx={{
+              width: "200px",
+            }}
+            row
+            defaultValue="light"
+          >
+            <FormControlLabel
+              value="light"
+              label="light"
+              sx={{
+                fontFamily: "'Quicksand', sans-serif",
+                ml: "40px",
+              }}
+              control={
+                <Radio
+                  // disableRipple
+                  // color="default"
+                  checkedIcon={<ThemeRadioChecked />}
+                  icon={<ThemeRadio />}
+                  onChange={colorMode.toggleColorMode}
+                />
+              }
             />
-          }
-        />
-        <FormControlLabel
-          value="dark"
-          label="dark"
-          control={
-            <Radio
-              disableRipple
-              color="default"
-              checkedIcon={<BpCheckedIcon />}
-              icon={<BpIcon />}
-              onChange={colorMode.toggleColorMode}
+            <FormControlLabel
+              value="dark"
+              label="dark"
+              sx={{
+                fontFamily: "'Quicksand', sans-serif",
+              }}
+              control={
+                <Radio
+                  // disableRipple
+                  // color="default"
+                  checkedIcon={<ThemeRadioChecked />}
+                  icon={<ThemeRadio />}
+                  onChange={colorMode.toggleColorMode}
+                />
+              }
             />
-          }
-        />
-      </RadioGroup>
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
+          </RadioGroup>
+        </Box>
+        <Box
+          sx={{
+            // backgroundColor: "pink",
+            height: "calc(100vh - 60px)",
+            border: "3px solid black",
+            margin: "30px 30px 30px 0",
+            width: "calc(100vw - 60px)",
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </Box>
+      </Box>
     </ThemeProvider>
   );
 }
