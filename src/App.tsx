@@ -53,14 +53,14 @@ function App() {
             <FormControlLabel
               value="light"
               label="light"
-              sx={{
-                fontFamily: "'Quicksand', sans-serif",
-                ml: "40px",
-              }}
+              // variant="caption"
+              // sx={{
+              //   // fontFamily: "Quicksand",
+              //   ml: "40px",
+              // }}
               control={
                 <Radio
-                  // disableRipple
-                  // color="default"
+                  disableRipple
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
                   onChange={colorMode.toggleColorMode}
@@ -70,13 +70,9 @@ function App() {
             <FormControlLabel
               value="dark"
               label="dark"
-              sx={{
-                fontFamily: "'Quicksand', sans-serif",
-              }}
               control={
                 <Radio
-                  // disableRipple
-                  // color="default"
+                  disableRipple
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
                   onChange={colorMode.toggleColorMode}
