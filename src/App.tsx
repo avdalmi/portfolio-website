@@ -54,10 +54,10 @@ function App() {
               value="light"
               label="light"
               // variant="caption"
-              // sx={{
-              //   // fontFamily: "Quicksand",
-              //   ml: "40px",
-              // }}
+              sx={{
+                // fontFamily: "Quicksand",
+                ml: "40px",
+              }}
               control={
                 <Radio
                   disableRipple
