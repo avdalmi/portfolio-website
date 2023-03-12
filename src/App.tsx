@@ -7,35 +7,47 @@ import {
   RadioGroup,
   ThemeProvider,
 } from "@mui/material";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import {
+  MainCont,
+  ThemeRadio,
+  ThemeRadioChecked,
+  getDesignTokens,
+} from "./styles";
 import HomePage from "./pages/HomePage";
-import { ThemeRadioChecked, ThemeRadio } from "./styles/theme/radioButton";
-import { getDesignTokens } from "./styles/theme/theme";
 
 function App() {
   const [mode, setMode] = useState("light");
 
   const colorMode = useMemo(
     () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      toggleColorMode: (e: any) => {
+        setMode(e.target.value);
+        window.localStorage.setItem("theme", e.target.value);
       },
     }),
     []
   );
+
+  useEffect(() => {
+    if (typeof window !== "undefined")
+      setMode(window.localStorage.getItem("theme") || "light");
+  }, []);
 
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box
-        style={{
-          display: "flex",
-          alignItems: "flex-end",
-        }}
+      <MainCont
+      // style={{
+      //   display: "flex",
+      //   alignItems: "flex-end",
+      //   // backgroundColor: "pink",
+      //   transition: "all 1.9s ease",
+      // }}
       >
         <Box
           sx={{
@@ -48,34 +60,37 @@ function App() {
               width: "200px",
             }}
             row
-            defaultValue="light"
           >
             <FormControlLabel
               value="light"
               label="light"
-              // variant="caption"
               sx={{
-                // fontFamily: "Quicksand",
                 ml: "40px",
               }}
+              checked={mode === "light" ? true : false}
               control={
                 <Radio
                   disableRipple
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
-                  onChange={colorMode.toggleColorMode}
+                  onChange={(e) => {
+                    colorMode.toggleColorMode(e);
+                  }}
                 />
               }
             />
             <FormControlLabel
               value="dark"
               label="dark"
+              checked={mode === "dark" ? true : false}
               control={
                 <Radio
                   disableRipple
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
-                  onChange={colorMode.toggleColorMode}
+                  onChange={(e) => {
+                    colorMode.toggleColorMode(e);
+                  }}
                 />
               }
             />
@@ -85,16 +100,17 @@ function App() {
           sx={{
             // backgroundColor: "pink",
             height: "calc(100vh - 60px)",
-            border: "3px solid black",
+            border: `1px solid ${theme.palette.divider}`,
             margin: "30px 30px 30px 0",
             width: "calc(100vw - 60px)",
+            transition: "all 1.9s ease",
           }}
         >
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
         </Box>
-      </Box>
+      </MainCont>
     </ThemeProvider>
   );
 }
