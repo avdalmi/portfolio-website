@@ -1,13 +1,12 @@
 import {
   Box,
-  createTheme,
   CssBaseline,
   FormControlLabel,
   Radio,
   RadioGroup,
-  ThemeProvider,
 } from "@mui/material";
-import { useMemo, useState, useEffect } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import React, { useMemo, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import {
@@ -17,15 +16,16 @@ import {
   getDesignTokens,
 } from "./styles";
 import HomePage from "./pages/HomePage";
+import { SectionCont } from "./styles/container/container";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = React.useState<string>("light");
 
   const colorMode = useMemo(
     () => ({
-      toggleColorMode: (e: any) => {
-        setMode(e.target.value);
-        window.localStorage.setItem("theme", e.target.value);
+      toggleColorMode: (e: string) => {
+        setMode(e);
+        window.localStorage.setItem("theme", e);
       },
     }),
     []
@@ -36,31 +36,19 @@ function App() {
       setMode(window.localStorage.getItem("theme") || "light");
   }, []);
 
-  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <MainCont
-      // style={{
-      //   display: "flex",
-      //   alignItems: "flex-end",
-      //   // backgroundColor: "pink",
-      //   transition: "all 1.9s ease",
-      // }}
-      >
+      <MainCont>
         <Box
           sx={{
             transform: "rotate(-90deg)",
             width: "30px",
           }}
         >
-          <RadioGroup
-            sx={{
-              width: "200px",
-            }}
-            row
-          >
+          <RadioGroup sx={{ width: "200px" }} row>
             <FormControlLabel
               value="light"
               label="light"
@@ -74,7 +62,7 @@ function App() {
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
                   onChange={(e) => {
-                    colorMode.toggleColorMode(e);
+                    colorMode.toggleColorMode(e.target.value);
                   }}
                 />
               }
@@ -89,27 +77,18 @@ function App() {
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
                   onChange={(e) => {
-                    colorMode.toggleColorMode(e);
+                    colorMode.toggleColorMode(e.target.value);
                   }}
                 />
               }
             />
           </RadioGroup>
         </Box>
-        <Box
-          sx={{
-            // backgroundColor: "pink",
-            height: "calc(100vh - 60px)",
-            border: `1px solid ${theme.palette.divider}`,
-            margin: "30px 30px 30px 0",
-            width: "calc(100vw - 60px)",
-            transition: "all 1.9s ease",
-          }}
-        >
+        <SectionCont>
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
-        </Box>
+        </SectionCont>
       </MainCont>
     </ThemeProvider>
   );

@@ -1,4 +1,6 @@
+import { createTheme, PaletteMode } from "@mui/material";
 import { deepOrange } from "@mui/material/colors";
+import { useMemo } from "react";
 
 export const getDesignTokens = (mode: string) => ({
   mode,
@@ -24,10 +26,11 @@ export const getDesignTokens = (mode: string) => ({
         typography: {
           h1: {
             fontFamily: "Quicksand",
-            fontSize: "4rem",
+            fontSize: "3rem",
             fontWeight: 300,
             lineHeight: 1.15,
             letterSpacing: "0.05em",
+            padding: "1rem",
           },
         },
         components: {
@@ -65,10 +68,11 @@ export const getDesignTokens = (mode: string) => ({
         typography: {
           h1: {
             fontFamily: "Quicksand",
-            fontSize: "4rem",
+            fontSize: "3rem",
             fontWeight: 300,
             lineHeight: 1.15,
             letterSpacing: "0.05em",
+            padding: "1rem",
           },
         },
         components: {

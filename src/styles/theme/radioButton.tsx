@@ -1,3 +1,4 @@
+import { FormControlLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const ThemeRadio = styled("input")(({ theme }) => ({
@@ -13,3 +14,5 @@ export const ThemeRadioChecked = styled(ThemeRadio)(({ theme }) => ({
   outline: `1px solid ${theme.palette.text.primary}`,
   border: `2px solid ${theme.palette.background.default}`,
 }));
+
+export const SFormControlLabel = styled(FormControlLabel)(({ theme }) => ({}));

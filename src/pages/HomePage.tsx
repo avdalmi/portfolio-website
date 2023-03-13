@@ -4,7 +4,7 @@ import React from "react";
 function HomePage() {
   return (
     <div>
-      <Typography variant="h1">Homepage</Typography>
+      <Typography variant="h1">Akiko van Dal</Typography>
     </div>
   );
 }
