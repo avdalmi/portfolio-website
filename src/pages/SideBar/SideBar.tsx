@@ -6,10 +6,16 @@ import { SideBarCont } from "./styles";
 function SideBar() {
   return (
     <SideBarCont>
-      <Typography variant="h1">
-        <span style={{ transition: "all 0.8s ease" }}>Akiko</span>
+      <Typography
+        style={{
+          backgroundColor: "",
+          minWidth: "250px",
+        }}
+        variant="h1"
+      >
+        <span>Akiko</span>
         <br />
-        <span style={{ transition: "all 1.5s ease" }}>van Dal</span>
+        <span style={{ transition: "all 1s ease" }}>van Dal</span>
       </Typography>
       <NavBar />
     </SideBarCont>

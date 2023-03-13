@@ -5,6 +5,13 @@ export const AppCont = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "flex-end",
   transition: "all 1.9s ease",
+
+  [theme.breakpoints.down("sm")]: {
+    // height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    // transition: "all 1.2s ease",
+  },
 }));
 
 export const MainCont = styled(Box)(({ theme }) => ({
@@ -12,7 +19,7 @@ export const MainCont = styled(Box)(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   margin: "1.7rem 1.7rem 1.7rem 0",
   width: "calc(100vw - 60px)",
-  // transition: "all 1.9s ease",
+  // transition: "all 1s ease",
   display: "flex",
   // backgroundColor: "lavender",
   [theme.breakpoints.down("sm")]: {
@@ -28,4 +35,9 @@ export const MainCont = styled(Box)(({ theme }) => ({
 export const SectionCont = styled(Box)(({ theme }) => ({
   margin: "1.7rem",
   overflow: "auto",
+  // backgroundColor: "lavender",
+  // width: "100%",
+  [theme.breakpoints.up("sm")]: {
+    width: "150%",
+  },
 }));

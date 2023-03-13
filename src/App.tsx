@@ -16,6 +16,10 @@ import {
   getDesignTokens,
 } from "./GlobalStyles";
 import { AppCont } from "./GlobalStyles/container/container";
+import {
+  ThemeRadioCont,
+  ThemeRadioGroup,
+} from "./GlobalStyles/theme/radioButton";
 
 import {
   AboutPage,
@@ -50,13 +54,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppCont>
-        <Box
-          sx={{
-            transform: "rotate(-90deg)",
-            width: "30px",
-          }}
-        >
-          <RadioGroup sx={{ width: "200px" }} row>
+        <ThemeRadioCont>
+          <ThemeRadioGroup row>
             <FormControlLabel
               value="light"
               label="light"
@@ -90,8 +89,8 @@ function App() {
                 />
               }
             />
-          </RadioGroup>
-        </Box>
+          </ThemeRadioGroup>
+        </ThemeRadioCont>
 
         <MainCont>
           <SideBar />
