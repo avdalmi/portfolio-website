@@ -1,6 +1,4 @@
-import { createTheme, PaletteMode } from "@mui/material";
 import { deepOrange } from "@mui/material/colors";
-import { useMemo } from "react";
 
 export const getDesignTokens = (mode: string) => ({
   mode,

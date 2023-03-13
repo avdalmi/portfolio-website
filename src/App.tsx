@@ -1,10 +1,4 @@
-import {
-  Box,
-  CssBaseline,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
-} from "@mui/material";
+import { CssBaseline, FormControlLabel, Radio } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import React, { useMemo, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
