@@ -14,9 +14,13 @@ import {
   ThemeRadio,
   ThemeRadioChecked,
   getDesignTokens,
-} from "./styles";
-import HomePage from "./pages/HomePage";
-import { SectionCont } from "./styles/container/container";
+} from "./GlobalStyles";
+import HomePage from "./pages/HomePage/HomePage";
+import { AppCont } from "./GlobalStyles/container/container";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
+import CvPage from "./pages/CvPage/CvPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   const [mode, setMode] = React.useState<string>("light");
@@ -41,7 +45,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <MainCont>
+      <AppCont>
         <Box
           sx={{
             transform: "rotate(-90deg)",
@@ -84,12 +88,20 @@ function App() {
             />
           </RadioGroup>
         </Box>
-        <SectionCont>
+
+        <MainCont>
+          <HomePage />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            {/* <Route path="/portfolio"  /> */}
+            {/* <Route path="/home" element={<HomePage />} /> */}
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/cv" element={<CvPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route />
           </Routes>
-        </SectionCont>
-      </MainCont>
+        </MainCont>
+      </AppCont>
     </ThemeProvider>
   );
 }
