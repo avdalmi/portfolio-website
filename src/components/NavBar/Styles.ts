@@ -8,7 +8,6 @@ export const NavBarUL = styled(List)(({ theme }) => ({
   margin: "1rem 0",
   //   backgroundColor: "red",
   width: "100px",
-  //   transition: "all 0.9s ease",
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     flexDirection: "column",
@@ -22,7 +21,6 @@ export const NavBarLI = styled(ListItem)(({ theme }) => ({
   fontFamily: theme.palette.primary.main,
   fontSize: "0.7rem",
   lineHeight: 0.5,
-  transition: "all 0.9s ease",
 
   "&:hover": {
     fontSize: "0.9rem",

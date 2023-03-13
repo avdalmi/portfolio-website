@@ -6,7 +6,7 @@ function NavBar() {
   const dot = "●";
   const NavBarItems = [
     {
-      href: "/home",
+      href: "/",
       title: "Home",
     },
     {

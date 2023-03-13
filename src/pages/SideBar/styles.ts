@@ -1,11 +1,11 @@
 import { styled } from "@mui/material/styles";
-import { Link, Box, ListItem } from "@mui/material";
+import { Box } from "@mui/material";
 
-export const HomeMainCont = styled(Box)(({ theme }) => ({
-  width: "50%",
+export const SideBarCont = styled(Box)(({ theme }) => ({
+  width: "120%",
   //   height: "90vh",
   margin: "1.7rem 0 1.7rem 1.7rem",
-  //   backgroundColor: "pink",
+  //   backgroundColor: "thistle",
   [theme.breakpoints.up("md")]: {
     // transition: "all 1.2s ease",
   },

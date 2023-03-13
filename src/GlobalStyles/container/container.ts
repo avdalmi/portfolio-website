@@ -14,7 +14,7 @@ export const MainCont = styled(Box)(({ theme }) => ({
   width: "calc(100vw - 60px)",
   // transition: "all 1.9s ease",
   display: "flex",
-  // backgroundColor: "pink",
+  // backgroundColor: "lavender",
   [theme.breakpoints.down("sm")]: {
     // backgroundColor: "orange",
     // width: "30%",
@@ -26,12 +26,6 @@ export const MainCont = styled(Box)(({ theme }) => ({
 }));
 
 export const SectionCont = styled(Box)(({ theme }) => ({
-  // height: "calc(100vh - 60px)",
-  // border: `1px solid ${theme.palette.divider}`,
   margin: "1.7rem",
   overflow: "auto",
-  // backgroundColor: "lavenderblush",
-  // width: "calc(100vw - 60px)",
-  // transition: "all 1.9s ease",
-  // display: "flex",
 }));

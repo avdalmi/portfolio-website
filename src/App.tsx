@@ -15,12 +15,16 @@ import {
   ThemeRadioChecked,
   getDesignTokens,
 } from "./GlobalStyles";
-import HomePage from "./pages/HomePage/HomePage";
 import { AppCont } from "./GlobalStyles/container/container";
-import AboutPage from "./pages/AboutPage/AboutPage";
-import ProjectPage from "./pages/ProjectPage/ProjectPage";
-import CvPage from "./pages/CvPage/CvPage";
-import ContactPage from "./pages/ContactPage/ContactPage";
+
+import {
+  AboutPage,
+  ProjectPage,
+  CvPage,
+  ContactPage,
+  SideBar,
+  HomePage,
+} from "./pages/index";
 
 function App() {
   const [mode, setMode] = React.useState<string>("light");
@@ -90,10 +94,9 @@ function App() {
         </Box>
 
         <MainCont>
-          <HomePage />
+          <SideBar />
           <Routes>
-            {/* <Route path="/portfolio"  /> */}
-            {/* <Route path="/home" element={<HomePage />} /> */}
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/cv" element={<CvPage />} />
