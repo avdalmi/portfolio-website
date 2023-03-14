@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Box, Paper } from "@mui/material";
 
-export const AppCont = styled(Box)(({ theme }) => ({
+export const AppBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "flex-end",
   transition: "all 1.9s ease",
@@ -14,7 +14,7 @@ export const AppCont = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const MainCont = styled(Box)(({ theme }) => ({
+export const MainBox = styled(Box)(({ theme }) => ({
   height: "calc(100vh - 60px)",
   border: `1px solid ${theme.palette.divider}`,
   margin: "1.7rem 1.7rem 1.7rem 0",
@@ -25,6 +25,7 @@ export const MainCont = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     // backgroundColor: "orange",
     // width: "30%",
+    minHeight: "calc(100vh - 60px)",
     height: "100%",
     display: "flex",
     flexDirection: "column",
@@ -32,12 +33,16 @@ export const MainCont = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const SectionCont = styled(Box)(({ theme }) => ({
+export const SectionBox = styled(Box)(({ theme }) => ({
   margin: "1.7rem",
   overflow: "auto",
   // backgroundColor: "lavender",
   // width: "100%",
   [theme.breakpoints.up("sm")]: {
     width: "150%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    textAlign: "center",
+    margin: "1rem",
   },
 }));

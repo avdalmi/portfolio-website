@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { SectionCont } from "../../GlobalStyles/container/container";
+import { SectionBox } from "../../GlobalStyles/container/container";
 import { AboutCont } from "./styles";
 
 function AboutPage() {
   return (
-    <SectionCont sx={{ display: "flex" }}>
+    <SectionBox sx={{ display: "flex" }}>
       <AboutCont>
         <Typography variant="subtitle1" sx={{ textAlign: "justify" }}>
           {" "}
@@ -32,7 +32,7 @@ function AboutPage() {
           software developer during their experimental start-up phase.
         </Typography>
       </AboutCont>
-    </SectionCont>
+    </SectionBox>
   );
 }
 

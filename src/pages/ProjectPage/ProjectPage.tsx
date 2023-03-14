@@ -1,25 +1,22 @@
-import { Link, Typography } from "@mui/material";
-import React from "react";
+import { Typography } from "@mui/material";
 import { projectData } from "../../data/Project";
-import { SectionCont } from "../../GlobalStyles/container/container";
+import { SectionBox } from "../../GlobalStyles/container/container";
+import { ProjectNavBox, ProjectNavLink, ProjectNavTitle } from "./style";
 
 function ProjectPage() {
   return (
-    <SectionCont
-    // sx={ { backgroundColor: "thistle" } }
-    >
+    <SectionBox sx={{ textAlign: "right" }}>
       {projectData.map((project) => {
         return (
-          <div key={project.id}>
-            <Link href={`/projecs/${project.id}`}>
-              <Typography variant="h2">{project.title}</Typography>
-            </Link>
-            <Typography variant="h4">{project.stack}</Typography>
-            <Typography variant="h5">{project.location}</Typography>
-          </div>
+          <ProjectNavBox key={project.id}>
+            <ProjectNavLink href={`/projects/${project.id}`}>
+              <ProjectNavTitle variant="h2">{project.title}</ProjectNavTitle>
+            </ProjectNavLink>
+            <Typography variant="h5">{project.type}</Typography>
+          </ProjectNavBox>
         );
       })}
-    </SectionCont>
+    </SectionBox>
   );
 }
 

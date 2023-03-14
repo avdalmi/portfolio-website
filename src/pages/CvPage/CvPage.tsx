@@ -1,26 +1,22 @@
-import React from "react";
 import {
   Timeline,
   TimelineConnector,
   TimelineContent,
-  TimelineDot,
   TimelineItem,
   TimelineSeparator,
 } from "@mui/lab";
 import { CvElements } from "../../data/CV";
-import { SectionCont } from "../../GlobalStyles/container/container";
+import { SectionBox } from "../../GlobalStyles/container/container";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
-import { Box, Typography } from "@mui/material";
-
-import { School, SchoolOutlined, WorkOutline } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 import { CvItemBox, SchoolIconS, TimelineDotS, WorkIconS } from "./styles";
 
 function CvPage() {
   const getCvItems = () => {
     return CvElements.map((item) => {
       return (
-        <CvItemBox>
-          <TimelineItem key={item.id} sx={{ m: "1rem 0" }}>
+        <CvItemBox key={item.id}>
+          <TimelineItem sx={{ m: "1rem 0" }}>
             <TimelineSeparator>
               <TimelineDotS>
                 {item.icon === "school" ? <SchoolIconS /> : <WorkIconS />}
@@ -42,10 +38,11 @@ function CvPage() {
   };
 
   return (
-    <SectionCont>
+    <SectionBox>
       <Timeline
-        style={{ overflow: "auto" }}
+        // style={{ overflow: "auto" }}
         sx={{
+          overflow: "auto",
           [`& .${timelineItemClasses.root}:before`]: {
             flex: 0,
             padding: 0,
@@ -55,7 +52,7 @@ function CvPage() {
         {" "}
         {getCvItems()}
       </Timeline>
-    </SectionCont>
+    </SectionBox>
   );
 }
 

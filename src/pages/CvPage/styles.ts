@@ -10,7 +10,9 @@ export const CvItemBox = styled(Box)(({ theme }) => ({
   borderRadius: "5px",
   minWidth: "250px",
   transition: "all 0.5s ease",
-  [theme.breakpoints.down("sm")]: {},
+  [theme.breakpoints.down("sm")]: {
+    margin: "0.5rem 0",
+  },
 }));
 
 export const WorkIconS = styled(WorkOutline)(({ theme }) => ({

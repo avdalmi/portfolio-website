@@ -32,26 +32,27 @@ export const getDesignTokens = (mode: string) => ({
           },
           h2: {
             fontFamily: "Quicksand",
-            fontSize: "2rem",
-            fontWeight: 300,
-            lineHeight: 1.15,
+            fontSize: "1.7rem",
+            fontWeight: 600,
+            // lineHeight: 1.75,
             letterSpacing: "0.05em",
-            padding: "1rem",
-          },
-          h4: {
-            fontFamily: "Quicksand",
-            fontSize: "1rem",
-            fontWeight: 400,
+            // padding: "1rem",
           },
           h3: {
             fontFamily: "Quicksand",
             fontSize: "0.9rem",
             fontWeight: 500,
           },
+          h4: {
+            fontFamily: "Quicksand",
+            fontSize: "1.3rem",
+            fontWeight: 600,
+          },
           h5: {
             fontFamily: "Quicksand",
             fontSize: "0.9rem",
-            fontWeight: 400,
+            fontWeight: 600,
+            lineHeight: 1.75,
           },
           h6: {
             fontFamily: "Quicksand",
@@ -103,11 +104,11 @@ export const getDesignTokens = (mode: string) => ({
           },
           h2: {
             fontFamily: "Quicksand",
-            fontSize: "2rem",
+            fontSize: "1.7rem",
             fontWeight: 500,
-            lineHeight: 1.15,
+            // lineHeight: 1.75,
             letterSpacing: "0.05em",
-            padding: "1rem",
+            // padding: "1rem",
           },
           h3: {
             fontFamily: "Quicksand",
@@ -123,6 +124,7 @@ export const getDesignTokens = (mode: string) => ({
             fontFamily: "Quicksand",
             fontSize: "0.9rem",
             fontWeight: 600,
+            lineHeight: 1.75,
           },
           h6: {
             fontFamily: "Quicksand",

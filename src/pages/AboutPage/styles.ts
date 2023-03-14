@@ -6,7 +6,7 @@ export const AboutCont = styled(Box)(({ theme }) => ({
   // backgroundColor: "pink",
   //   transition: "all 1.2s ease",
   [theme.breakpoints.up("md")]: {},
-  [theme.breakpoints.down("xs")]: {
+  [theme.breakpoints.down("sm")]: {
     margin: 0,
   },
 }));

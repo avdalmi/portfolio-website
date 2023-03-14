@@ -4,12 +4,12 @@ import React, { useMemo, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import {
-  MainCont,
+  MainBox,
+  AppBox,
   ThemeRadio,
   ThemeRadioChecked,
   getDesignTokens,
 } from "./GlobalStyles";
-import { AppCont } from "./GlobalStyles/container/container";
 import {
   ThemeRadioCont,
   ThemeRadioGroup,
@@ -48,7 +48,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppCont>
+      <AppBox>
         <ThemeRadioCont>
           <ThemeRadioGroup row>
             <FormControlLabel
@@ -87,7 +87,7 @@ function App() {
           </ThemeRadioGroup>
         </ThemeRadioCont>
 
-        <MainCont>
+        <MainBox>
           <SideBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -98,8 +98,8 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route />
           </Routes>
-        </MainCont>
-      </AppCont>
+        </MainBox>
+      </AppBox>
     </ThemeProvider>
   );
 }
