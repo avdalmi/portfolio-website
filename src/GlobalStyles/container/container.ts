@@ -10,7 +10,7 @@ export const AppBox = styled(Box)(({ theme }) => ({
     // height: "100%",
     display: "flex",
     flexDirection: "column",
-    // transition: "all 1.2s ease",
+    transition: "all 1.2s ease",
   },
 }));
 
@@ -19,7 +19,7 @@ export const MainBox = styled(Box)(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   margin: "1.7rem 1.7rem 1.7rem 0",
   width: "calc(100vw - 60px)",
-  // transition: "all 1s ease",
+  transition: "all 1s ease",
   display: "flex",
 
   [theme.breakpoints.down("sm")]: {

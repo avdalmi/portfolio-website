@@ -1,4 +1,3 @@
-import { ExpandMore } from "@mui/icons-material";
 import {
   AccordionDetails,
   AccordionSummary,
@@ -7,10 +6,8 @@ import {
   ListItem,
   Typography,
 } from "@mui/material";
-import { AccordionS } from "./style";
-import databaseJapaneasy from "../../assets/japaneasy/database.png";
-import "./style.css";
-import Magnifier from "../Magnifier/Magnifier";
+import { useState } from "react";
+import { AccordionS, ExpandIcon } from "./style";
 
 interface Project {
   tech?: {
@@ -25,12 +22,20 @@ interface Project {
 }
 
 function ProjectAccordion(project: Project) {
+  const [expanded, setExpanded] = useState<string | false>(false);
+  const handleExpansion =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
   return (
     <div style={{ margin: "1rem 0" }}>
       <Box>
         {project?.tech?.backend && (
-          <AccordionS>
-            <AccordionSummary expandIcon={<ExpandMore />}>
+          <AccordionS
+            expanded={expanded === "panel1"}
+            onChange={handleExpansion("panel1")}
+          >
+            <AccordionSummary expandIcon={<ExpandIcon />}>
               <Typography variant="h5">back end stack</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -47,8 +52,11 @@ function ProjectAccordion(project: Project) {
       </Box>
       <Box>
         {project?.tech?.frontend && (
-          <AccordionS>
-            <AccordionSummary expandIcon={<ExpandMore />}>
+          <AccordionS
+            expanded={expanded === "panel2"}
+            onChange={handleExpansion("panel2")}
+          >
+            <AccordionSummary expandIcon={<ExpandIcon />}>
               <Typography variant="h5">front end stack</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -65,8 +73,11 @@ function ProjectAccordion(project: Project) {
       </Box>
       <Box>
         {project?.readMe?.userStories && (
-          <AccordionS>
-            <AccordionSummary expandIcon={<ExpandMore />}>
+          <AccordionS
+            expanded={expanded === "panel3"}
+            onChange={handleExpansion("panel3")}
+          >
+            <AccordionSummary expandIcon={<ExpandIcon />}>
               <Typography variant="h5">user stories</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -85,18 +96,48 @@ function ProjectAccordion(project: Project) {
       </Box>
       <Box>
         {project?.readMe?.database && (
-          <AccordionS>
-            <AccordionSummary expandIcon={<ExpandMore />}>
+          <AccordionS
+            expanded={expanded === "panel4"}
+            onChange={handleExpansion("panel4")}
+          >
+            <AccordionSummary expandIcon={<ExpandIcon />}>
               <Typography variant="h5">database tables</Typography>
             </AccordionSummary>
             <AccordionDetails sx={{ overflow: "auto" }}>
-              {/* <img src={project?.readMe?.database} alt="bla" /> */}
-              {/* <img
-                src={project?.readMe?.database}
-                alt="database structure of project"
-              /> */}
-
-              <Magnifier width={"100%"} src={databaseJapaneasy} />
+              <a
+                href={project?.readMe?.database}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={project?.readMe?.database}
+                  alt="database table for project"
+                />
+              </a>
+            </AccordionDetails>
+          </AccordionS>
+        )}
+      </Box>
+      <Box>
+        {project?.readMe?.wireframes && (
+          <AccordionS
+            expanded={expanded === "panel5"}
+            onChange={handleExpansion("panel5")}
+          >
+            <AccordionSummary expandIcon={<ExpandIcon />}>
+              <Typography variant="h5">wireframes</Typography>
+            </AccordionSummary>
+            <AccordionDetails sx={{ overflow: "auto" }}>
+              <a
+                href={project?.readMe?.wireframes}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={project?.readMe?.wireframes}
+                  alt="wireframes for project"
+                />
+              </a>
             </AccordionDetails>
           </AccordionS>
         )}

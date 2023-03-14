@@ -15,6 +15,8 @@ export const LinkButton = styled(Button)(({ theme }) => ({
 }));
 
 export const ButtonBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexWrap: "wrap",
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     justifyContent: "center",

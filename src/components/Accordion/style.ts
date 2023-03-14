@@ -1,3 +1,4 @@
+import { ExpandMore } from "@mui/icons-material";
 import { Accordion } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
@@ -14,4 +15,8 @@ export const AccordionS = styled(Accordion)(({ theme }) => ({
     // transition: "all 1s ease",
   },
   [theme.breakpoints.down("sm")]: {},
+}));
+
+export const ExpandIcon = styled(ExpandMore)(({ theme }) => ({
+  color: theme.palette.divider,
 }));

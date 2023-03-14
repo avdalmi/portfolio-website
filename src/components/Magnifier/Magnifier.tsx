@@ -86,10 +86,3 @@ function Magnifier({
   );
 }
 export default Magnifier;
-// export default function App() {
-//   return (
-//     <div className="App">
-//       <Magnifier width={"200px"} src={databaseJapaneasy} />
-//     </div>
-//   );
-// }

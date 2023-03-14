@@ -1,5 +1,5 @@
 import databaseJapaneasy from "../assets/japaneasy/database.png";
-
+import wireframesJapaneasy from "../assets/japaneasy/wireframes.png";
 export const projectData = [
   {
     id: 3,
@@ -58,8 +58,7 @@ export const projectData = [
         "As a user I want to be able to know what certain ingredients are and what to replace them with if I do not have them.",
         "As a user I want to be able to keep track of which step of the recipe instructions I am on",
       ],
-      wireframes:
-        "/Users/Akiko_1/Desktop/Education/Projects/portfolioweb/src/assets/japaneasy/wireframes.png",
+      wireframes: wireframesJapaneasy,
       database: databaseJapaneasy,
     },
   },
