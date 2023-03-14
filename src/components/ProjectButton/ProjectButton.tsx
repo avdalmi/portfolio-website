@@ -1,6 +1,5 @@
 import { GitHub, OpenInNew } from "@mui/icons-material";
 import { Link } from "@mui/material";
-import React from "react";
 import { ButtonBox, LinkButton } from "./style";
 
 interface ProjectLinks {

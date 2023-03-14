@@ -1,4 +1,4 @@
-import { Accordion, Box, Button } from "@mui/material";
+import { Accordion } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const AccordionS = styled(Accordion)(({ theme }) => ({

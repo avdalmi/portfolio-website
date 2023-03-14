@@ -1,6 +1,5 @@
 import { ExpandMore } from "@mui/icons-material";
 import {
-  Accordion,
   AccordionDetails,
   AccordionSummary,
   Box,
@@ -10,6 +9,9 @@ import {
 } from "@mui/material";
 import { AccordionS } from "./style";
 import databaseJapaneasy from "../../assets/japaneasy/database.png";
+import "./style.css";
+import Magnifier from "../Magnifier/Magnifier";
+
 interface Project {
   tech?: {
     frontend?: string[];
@@ -22,17 +24,7 @@ interface Project {
   };
 }
 
-interface ReadMe {
-  readMe?: {
-    userStories?: string[];
-    wireframes?: string;
-    database?: string;
-  };
-}
-
 function ProjectAccordion(project: Project) {
-  //   console.log("tech", tech);
-  //   console.log("readme", tech);
   return (
     <div style={{ margin: "1rem 0" }}>
       <Box>
@@ -99,11 +91,12 @@ function ProjectAccordion(project: Project) {
             </AccordionSummary>
             <AccordionDetails sx={{ overflow: "auto" }}>
               {/* <img src={project?.readMe?.database} alt="bla" /> */}
-              <img
-                style={{ width: "100%" }}
+              {/* <img
                 src={project?.readMe?.database}
                 alt="database structure of project"
-              />
+              /> */}
+
+              <Magnifier width={"100%"} src={databaseJapaneasy} />
             </AccordionDetails>
           </AccordionS>
         )}

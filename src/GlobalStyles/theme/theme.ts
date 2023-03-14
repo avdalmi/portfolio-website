@@ -1,5 +1,3 @@
-import { deepOrange } from "@mui/material/colors";
-
 export const getDesignTokens = (mode: string) => ({
   mode,
   ...(mode === "light"

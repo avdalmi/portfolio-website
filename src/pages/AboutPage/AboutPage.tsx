@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import React from "react";
 import { SectionBox } from "../../GlobalStyles/container/container";
 import { AboutCont } from "./styles";
 
