@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 
 export const AppCont = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -21,7 +21,7 @@ export const MainCont = styled(Box)(({ theme }) => ({
   width: "calc(100vw - 60px)",
   // transition: "all 1s ease",
   display: "flex",
-  // backgroundColor: "lavender",
+
   [theme.breakpoints.down("sm")]: {
     // backgroundColor: "orange",
     // width: "30%",

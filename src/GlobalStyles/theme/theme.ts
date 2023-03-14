@@ -14,7 +14,7 @@ export const getDesignTokens = (mode: string) => ({
           divider: "#1c1c1c",
           background: {
             default: "#e6e6e6",
-            paper: deepOrange[900],
+            // paper: deepOrange[900],
           },
           text: {
             primary: "#1c1c1c",
@@ -30,12 +30,30 @@ export const getDesignTokens = (mode: string) => ({
             letterSpacing: "0.05em",
             padding: "1rem",
           },
+          h2: {
+            fontFamily: "Quicksand",
+            fontSize: "2rem",
+            fontWeight: 300,
+            lineHeight: 1.15,
+            letterSpacing: "0.05em",
+            padding: "1rem",
+          },
           h4: {
             fontFamily: "Quicksand",
             fontSize: "1rem",
             fontWeight: 400,
           },
+          h3: {
+            fontFamily: "Quicksand",
+            fontSize: "0.9rem",
+            fontWeight: 500,
+          },
           h5: {
+            fontFamily: "Quicksand",
+            fontSize: "0.9rem",
+            fontWeight: 400,
+          },
+          h6: {
             fontFamily: "Quicksand",
             fontSize: "0.9rem",
             fontWeight: 400,
@@ -54,19 +72,7 @@ export const getDesignTokens = (mode: string) => ({
             xl: 1536,
           },
         },
-        components: {
-          MuiFormControlLabel: {
-            styleOverrides: {
-              root: {
-                fontFamily: "Quicksand",
-                fontSize: "3rem",
-                fontWeight: 300,
-                lineHeight: 1.15,
-                letterSpacing: "0.05em",
-              },
-            },
-          },
-        },
+        components: {},
       }
     : {
         palette: {
@@ -94,6 +100,19 @@ export const getDesignTokens = (mode: string) => ({
             lineHeight: 1.15,
             letterSpacing: "0.05em",
             padding: "1rem",
+          },
+          h2: {
+            fontFamily: "Quicksand",
+            fontSize: "2rem",
+            fontWeight: 500,
+            lineHeight: 1.15,
+            letterSpacing: "0.05em",
+            padding: "1rem",
+          },
+          h3: {
+            fontFamily: "Quicksand",
+            fontSize: "0.9rem",
+            fontWeight: 500,
           },
           h4: {
             fontFamily: "Quicksand",
@@ -125,17 +144,27 @@ export const getDesignTokens = (mode: string) => ({
           },
         },
         components: {
-          MuiFormControlLabel: {
-            styleOverrides: {
-              root: {
-                fontFamily: "Quicksand",
-                fontSize: "4rem",
-                fontWeight: 300,
-                lineHeight: 1.15,
-                letterSpacing: "0.05em",
-              },
-            },
-          },
+          // MuiFormControlLabel: {
+          //   styleOverrides: {
+          //     root: {
+          //       fontFamily: "Quicksand",
+          //       fontSize: "4rem",
+          //       fontWeight: 300,
+          //       lineHeight: 1.15,
+          //       letterSpacing: "0.05em",
+          //     },
+          //   },
+          // },
+          // MuiIcon: {
+          //   variants: [
+          //     {
+          //       props: { color: "primary" },
+          //       style: {
+          //         backgroundColor: "pink",
+          //       },
+          //     },
+          //   ],
+          // },
         },
       }),
 });

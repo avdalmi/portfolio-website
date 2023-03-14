@@ -21,14 +21,15 @@ function AboutPage() {
           <br />
           During the pandemic I tried many different online courses, and in the
           summer of 2021 I started the full-stack developer path on Codecademy
-          and instantly fell in love with programming. <br />
+          and instantly fell in love with programming, to the point where I had
+          to peel myself from my laptop to go to sleep. <br />
           <br />
           After a few weeks I decided to enroll myself into Codaisseur where I
           spent 10 intense weeks studying.
           <br />
           <br />
-          After graduating I started working for Building Tech Heros as a
-          software developer.
+          After graduating I started working for Building Tech Heroes as a
+          software developer during their experimental start-up phase.
         </Typography>
       </AboutCont>
     </SectionCont>

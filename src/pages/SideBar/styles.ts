@@ -5,6 +5,7 @@ export const SideBarCont = styled(Box)(({ theme }) => ({
   // width: "120%",
   // width: "24rem",
   // width: "1000px",
+
   //   height: "90vh",
   margin: "1.7rem 0 1.7rem 1.7rem",
   // backgroundColor: "thistle",

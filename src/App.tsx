@@ -23,6 +23,7 @@ import {
   SideBar,
   HomePage,
 } from "./pages/index";
+import ProjectCardPage from "./pages/ProjectCardPage/ProjectCardPage";
 
 function App() {
   const [mode, setMode] = React.useState<string>("light");
@@ -92,6 +93,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/projects/:id" element={<ProjectCardPage />} />
             <Route path="/cv" element={<CvPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route />
