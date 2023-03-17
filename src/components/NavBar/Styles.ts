@@ -21,7 +21,7 @@ export const NavBarLI = styled(ListItem)(({ theme }) => ({
   fontFamily: theme.palette.primary.main,
   fontSize: "0.7rem",
   lineHeight: 0.5,
-
+  transition: "all 0.9s ease",
   "&:hover": {
     fontSize: "0.9rem",
     transition: "all 0.9s ease",
@@ -30,6 +30,7 @@ export const NavBarLI = styled(ListItem)(({ theme }) => ({
 
 export const NavBarLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
+
   [theme.breakpoints.down("sm")]: {
     // textAlign: "right",
     // backgroundColor: "thistle",

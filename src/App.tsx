@@ -22,8 +22,9 @@ import {
   ContactPage,
   SideBar,
   HomePage,
+  ProjectCardPage,
+  SkillsPage,
 } from "./pages/index";
-import ProjectCardPage from "./pages/ProjectCardPage/ProjectCardPage";
 
 function App() {
   const [mode, setMode] = React.useState<string>("light");
@@ -96,7 +97,7 @@ function App() {
             <Route path="/projects/:id" element={<ProjectCardPage />} />
             <Route path="/cv" element={<CvPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route />
+            <Route path="/skills/" element={<SkillsPage />} />
           </Routes>
         </MainBox>
       </AppBox>

@@ -1,17 +1,18 @@
+import { Code } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
 import { NavBarLI, NavBarLink, NavBarUL } from "./Styles";
 
 function NavBar() {
   const location = useLocation();
-  const dot = "●";
+  const dot = <Code sx={{ height: "10px", m: "-5px" }} />;
   const NavBarItems = [
     {
       href: "/",
-      title: "Home",
+      title: "home",
     },
     {
       href: "/about",
-      title: "About",
+      title: "about",
     },
     {
       href: "/cv",
@@ -19,11 +20,15 @@ function NavBar() {
     },
     {
       href: "/projects",
-      title: "Projects",
+      title: "projects",
     },
     {
       href: "/contact",
-      title: "Contact",
+      title: "contact",
+    },
+    {
+      href: "/skills",
+      title: "skills",
     },
   ];
 

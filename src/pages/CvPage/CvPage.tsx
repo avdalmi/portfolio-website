@@ -8,8 +8,10 @@ import {
 import { CvElements } from "../../data/CV";
 import { SectionBox } from "../../GlobalStyles/container/container";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
-import { Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import { CvItemBox, SchoolIconS, TimelineDotS, WorkIconS } from "./styles";
+import { LinkButton } from "../../components/ProjectButton/style";
+import { Download } from "@mui/icons-material";
 
 function CvPage() {
   const getCvItems = () => {
@@ -39,8 +41,14 @@ function CvPage() {
 
   return (
     <SectionBox>
+      <Link
+        sx={{ textDecoration: "none", m: "0.5rem", p: "15px" }}
+        href={require("../../assets/cv/Akiko_van_Dal_CV.pdf")}
+        download="Akiko_van_Dal_CV"
+      >
+        <LinkButton startIcon={<Download />}>download CV</LinkButton>
+      </Link>
       <Timeline
-        // style={{ overflow: "auto" }}
         sx={{
           overflow: "auto",
           [`& .${timelineItemClasses.root}:before`]: {
