@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SectionBox } from "../../GlobalStyles";
-import { FormInput } from "./style";
-import { Button, TextField } from "@mui/material";
+import { FormInput, SubmitButton } from "./style";
 
 const ContactPage = () => {
   const form = useRef(null);
@@ -43,15 +42,7 @@ const ContactPage = () => {
           marginTop: "1.7rem",
         }}
       >
-        <FormInput
-          type="text"
-          name="from_name"
-          required
-          label="name"
-          InputLabelProps={{
-            sx: {},
-          }}
-        />
+        <FormInput type="text" name="from_name" required label="name" />
 
         <FormInput type="email" name="from_email" required label="email" />
 
@@ -62,9 +53,9 @@ const ContactPage = () => {
           data-sitekey="6LfL0hAlAAAAALlQ_u9fjqVEp7a2USmNpHgzjM-z"
         ></div>
         <br />
-        <Button type="submit" value="Send">
+        <SubmitButton type="submit" value="Send">
           submit
-        </Button>
+        </SubmitButton>
       </form>
     </SectionBox>
   );

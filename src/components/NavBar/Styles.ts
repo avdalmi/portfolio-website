@@ -18,7 +18,6 @@ export const NavBarUL = styled(List)(({ theme }) => ({
 
 export const NavBarLI = styled(ListItem)(({ theme }) => ({
   color: theme.palette.primary.main,
-  fontFamily: theme.palette.primary.main,
   fontSize: "0.7rem",
   lineHeight: 0.5,
   // transition: "all 0.9s ease",

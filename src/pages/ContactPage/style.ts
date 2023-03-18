@@ -1,19 +1,21 @@
 import { styled } from "@mui/material/styles";
-import { Box, FormLabel, Input, TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 
 export const FormInput = styled(TextField)(({ theme }) => ({
-  //   margin: "0.7rem 0",
-
   "& .MuiOutlinedInput-root": {
-    fontFamily: "Quicksand",
     "& fieldset": {
-      margin: "0.7rem 0",
+      margin: "0.8rem 0",
       border: `1px solid ${theme.palette.divider}`,
       borderRadius: "7px",
     },
-    "&.Mui-focused fieldset": {
-      //   border: `4px solid green`,
-      //   backgroundColor: "pink",
-    },
+  },
+}));
+
+export const SubmitButton = styled(Button)(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
+
+  "&:hover": {
+    backgroundColor: theme.palette.text.primary,
+    color: theme.palette.background.default,
   },
 }));

@@ -60,6 +60,7 @@ export const getDesignTokens = (mode: string) => ({
           subtitle1: {
             fontSize: "0.9rem",
             fontWeight: 300,
+            fontFamily: "Nunito Sans",
           },
         },
         breakpoints: {
@@ -132,6 +133,7 @@ export const getDesignTokens = (mode: string) => ({
           subtitle1: {
             fontSize: "0.9rem",
             fontWeight: 300,
+            fontFamily: "Nunito Sans",
           },
         },
         breakpoints: {
