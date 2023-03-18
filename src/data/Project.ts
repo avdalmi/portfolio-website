@@ -101,127 +101,137 @@ export const projectData = [
   },
 ];
 
-export const skills = [
-  {
-    name: "React",
-    type: "frontend",
-    webUrl: "https://reactjs.org/",
-  },
-  {
-    name: "Redux",
-    type: "frontend",
-    webUrl: "https://redux.js.org/",
-  },
-  {
-    name: "React Native",
-    type: "frontend",
-    webUrl: "https://reactnative.dev/",
-  },
-  {
-    name: "JavaScript",
-    type: "language",
-    webUrl: "https://www.javascript.com/",
-  },
-  {
-    name: "TypeScript",
-    type: "language",
-    webUrl: "https://www.typescriptlang.org/",
-  },
-  {
-    name: "Python",
-    type: "language",
-    webUrl: "https://www.python.org/",
-  },
-  {
-    name: "Formik",
-    type: "frontend",
-    webUrl: "https://formik.org/",
-  },
-  {
-    name: "Styled Components",
-    type: "frontend",
-    webUrl: "https://styled-components.com/",
-  },
-  {
-    name: "Material UI",
-    type: "frontend",
-    webUrl: "https://mui.com/",
-  },
-  {
-    name: "Yup",
-    type: "validation",
-    webUrl: "https://github.com/jquense/yup",
-  },
-  {
-    name: "Jest",
-    type: "validation",
-    webUrl: "https://jestjs.io/",
-  },
+export const skills = {
+  frontend: [
+    {
+      name: "React",
+      link: "https://reactjs.org/",
+    },
+    {
+      name: "Redux",
+      link: "https://redux.js.org/",
+    },
+    {
+      name: "React Native",
+      link: "https://reactnative.dev/",
+    },
+    {
+      name: "Formik",
+      link: "https://formik.org/",
+    },
+    {
+      name: "Styled Components",
+      link: "https://styled-components.com/",
+    },
+    {
+      name: "Material UI",
+      link: "https://mui.com/",
+    },
+    {
+      name: "Lottie",
+      link: "https://lottiefiles.com/",
+    },
+    {
+      name: "Bootstrap",
+      link: "https://react-bootstrap.github.io/",
+    },
 
-  {
-    name: "HTML",
-    type: "language",
-    webUrl: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-  },
-  {
-    name: "CSS",
-    type: "language",
-    webUrl: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
-  {
-    name: "Lottie",
-    type: "frontend",
-    webUrl: "https://lottiefiles.com/",
-  },
-  {
-    name: "Bootstrap",
-    type: "frontend",
-    webUrl: "https://react-bootstrap.github.io/",
-  },
+    {
+      name: "Leaflet",
+      link: "https://react-leaflet.js.org/",
+    },
+    {
+      name: "Joyride",
+      link: "https://react-joyride.com/",
+    },
+  ],
+  languages: [
+    {
+      name: "JavaScript",
+      link: "https://www.javascript.com/",
+    },
+    {
+      name: "TypeScript",
+      link: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "Python",
+      link: "https://www.python.org/",
+    },
+    {
+      name: "HTML",
+      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    },
+    {
+      name: "CSS",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    },
+    {
+      name: "GraphQL",
+      link: "https://graphql.org/",
+    },
+  ],
+  backend: [
+    {
+      name: "Express",
+      link: "https://expressjs.com/",
+    },
+    {
+      name: "Sequelize",
+      link: "https://sequelize.org/",
+    },
 
-  {
-    name: "Leaflet",
-    type: "frontend",
-    webUrl: "https://react-leaflet.js.org/",
-  },
-  {
-    name: "Joyride",
-    type: "frontend",
-    webUrl: "https://react-joyride.com/",
-  },
-  {
-    name: "Express",
-    type: "backend",
-    webUrl: "https://expressjs.com/",
-  },
-  {
-    name: "Sequelize",
-    type: "backend",
-    webUrl: "https://sequelize.org/",
-  },
-  {
-    name: "GraphQL",
-    type: "language",
-    webUrl: "https://graphql.org/",
-  },
-  {
-    name: "PostgreSQL",
-    type: "backend",
-    webUrl: "https://www.postgresql.org/",
-  },
-  {
-    name: "Apollo Server",
-    type: "backend",
-    webUrl: "https://www.apollographql.com/docs/apollo-server/",
-  },
-  {
-    name: "Bcrypt",
-    type: "backend",
-    webUrl: "https://www.npmjs.com/package/bcryptjs",
-  },
-  {
-    name: "JSONWebToken",
-    type: "backend",
-    webUrl: "https://jwt.io/",
-  },
-];
+    {
+      name: "PostgreSQL",
+      link: "https://www.postgresql.org/",
+    },
+    {
+      name: "Apollo Server",
+      link: "https://www.apollographql.com/docs/apollo-server/",
+    },
+    {
+      name: "Bcrypt",
+      link: "https://www.npmjs.com/package/bcryptjs",
+    },
+    {
+      name: "JSONWebToken",
+      link: "https://jwt.io/",
+    },
+  ],
+  validation: [
+    {
+      name: "Yup",
+      link: "https://github.com/jquense/yup",
+    },
+    {
+      name: "Jest",
+      link: "https://jestjs.io/",
+    },
+  ],
+  certificates: [
+    {
+      name: "Full Stack Web Development",
+      link: "https://app.digit.ink/view-credential/ca1d9dbc-8f9d-4b5a-b110-87ac9f02bf95?di_ref=a2li",
+    },
+    {
+      name: "JavaScript",
+      link: "https://www.codecademy.com/profiles/board4670772788/certificates/705dcb15de0da4dd9d9fc4f3274b430e",
+    },
+    {
+      name: "Intermediate JavaScript",
+      link: "https://www.codecademy.com/profiles/board4670772788/certificates/512386fdc7f6c934f98b01e6afa8285a",
+    },
+    {
+      name: "TypeScript: Functions",
+      link: "https://www.codecademy.com/profiles/board4670772788/certificates/4e7826b0c9a343178a5b998322d1616c",
+    },
+    {
+      name: "TypeScript: Fundamentals",
+      link: "https://www.codecademy.com/profiles/board4670772788/certificates/d74421b4615249039756ea358748f532",
+    },
+    {
+      name: "React Testing",
+      link: "https://www.codecademy.com/profiles/board4670772788/certificates/1790781f3857d258b06a24f3c53424cd",
+    },
+  ],
+};

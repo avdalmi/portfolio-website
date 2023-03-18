@@ -32,8 +32,8 @@ function App() {
   const colorMode = useMemo(
     () => ({
       toggleColorMode: (e: string) => {
-        setMode(e);
         window.localStorage.setItem("theme", e);
+        setMode(e);
       },
     }),
     []
@@ -45,7 +45,6 @@ function App() {
   }, []);
 
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

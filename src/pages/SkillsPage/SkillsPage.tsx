@@ -5,11 +5,9 @@ import { skills } from "../../data/Project";
 import { SkillItem, SkillLink } from "./style";
 import { useState } from "react";
 
-interface Skills {
+interface Skill {
   name?: string;
-  type?: string;
-  imageUrl?: string;
-  webUrl?: string;
+  link?: string;
 }
 
 function SkillsPage() {
@@ -18,6 +16,7 @@ function SkillsPage() {
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
+
   return (
     <SectionBox>
       <AccordionS
@@ -28,17 +27,16 @@ function SkillsPage() {
           <Typography variant="h5">languages</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {skills.map((skill: Skills, index) => {
-            if (skill.type === "language") {
-              return (
-                <SkillLink key={index} href={skill.webUrl} target="_blank">
-                  <SkillItem variant="subtitle1">{skill.name}</SkillItem>
-                </SkillLink>
-              );
-            }
+          {skills.languages.map((skill: Skill, index) => {
+            return (
+              <Typography variant="subtitle1" key={index}>
+                {skill.name}
+              </Typography>
+            );
           })}
         </AccordionDetails>
       </AccordionS>
+
       <AccordionS
         expanded={expanded === "panel2"}
         onChange={handleExpansion("panel2")}
@@ -47,17 +45,16 @@ function SkillsPage() {
           <Typography variant="h5">front end</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {skills.map((skill, index) => {
-            if (skill.type === "frontend") {
-              return (
-                <SkillLink key={index} href={skill.webUrl} target="_blank">
-                  <SkillItem variant="subtitle1">{skill.name}</SkillItem>
-                </SkillLink>
-              );
-            }
+          {skills.frontend.map((skill: Skill, index) => {
+            return (
+              <Typography variant="subtitle1" key={index}>
+                {skill.name}
+              </Typography>
+            );
           })}
         </AccordionDetails>
       </AccordionS>
+
       <AccordionS
         expanded={expanded === "panel3"}
         onChange={handleExpansion("panel3")}
@@ -66,17 +63,16 @@ function SkillsPage() {
           <Typography variant="h5">back end</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {skills.map((skill, index) => {
-            if (skill.type === "backend") {
-              return (
-                <SkillLink key={index} href={skill.webUrl} target="_blank">
-                  <SkillItem variant="subtitle1">{skill.name}</SkillItem>
-                </SkillLink>
-              );
-            }
+          {skills.backend.map((skill: Skill, index) => {
+            return (
+              <Typography variant="subtitle1" key={index}>
+                {skill.name}
+              </Typography>
+            );
           })}
         </AccordionDetails>
       </AccordionS>
+
       <AccordionS
         expanded={expanded === "panel4"}
         onChange={handleExpansion("panel4")}
@@ -85,14 +81,30 @@ function SkillsPage() {
           <Typography variant="h5">validations & testing</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {skills.map((skill, index) => {
-            if (skill.type === "validation") {
-              return (
-                <SkillLink key={index} href={skill.webUrl} target="_blank">
-                  <SkillItem variant="subtitle1">{skill.name}</SkillItem>
-                </SkillLink>
-              );
-            }
+          {skills.validation.map((skill: Skill, index) => {
+            return (
+              <Typography variant="subtitle1" key={index}>
+                {skill.name}
+              </Typography>
+            );
+          })}
+        </AccordionDetails>
+      </AccordionS>
+
+      <AccordionS
+        expanded={expanded === "panel5"}
+        onChange={handleExpansion("panel5")}
+      >
+        <AccordionSummary expandIcon={<ExpandIcon />}>
+          <Typography variant="h5">certificates</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          {skills.certificates.map((skill: Skill, index) => {
+            return (
+              <SkillLink key={index} href={skill.link} target="_blank">
+                <SkillItem variant="subtitle1">{skill.name}</SkillItem>
+              </SkillLink>
+            );
           })}
         </AccordionDetails>
       </AccordionS>

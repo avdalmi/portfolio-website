@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 export const AppBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "flex-end",
-  transition: "all 1.9s ease",
+  // transition: "all 1.9s ease",
 
   [theme.breakpoints.down("sm")]: {
     // height: "100%",
@@ -19,7 +19,7 @@ export const MainBox = styled(Box)(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   margin: "1.7rem 1.7rem 1.7rem 0",
   width: "calc(100vw - 60px)",
-  // transition: "all 1s ease",
+  transition: "all 1s ease",
   display: "flex",
 
   [theme.breakpoints.down("sm")]: {
@@ -29,7 +29,7 @@ export const MainBox = styled(Box)(({ theme }) => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
-    // transition: "all 1.2s ease",
+    transition: "all 0.9s ease",
   },
 }));
 
@@ -38,6 +38,8 @@ export const SectionBox = styled(Box)(({ theme }) => ({
   overflow: "auto",
   // backgroundColor: "lavender",
   // width: "100%",
+  transition: "all 1.2s ease",
+
   [theme.breakpoints.up("sm")]: {
     width: "150%",
   },

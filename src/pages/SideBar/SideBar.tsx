@@ -15,7 +15,8 @@ function SideBar() {
       >
         <span>Akiko</span>
         <br />
-        <span style={{ transition: "all 1s ease" }}>van Dal</span>
+        {/* <span style={{ transition: "all 1s ease" }}>van Dal</span> */}
+        <span>van Dal</span>
       </Typography>
       <NavBar />
     </SideBarCont>

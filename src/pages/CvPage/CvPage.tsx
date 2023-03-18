@@ -17,7 +17,7 @@ function CvPage() {
   const getCvItems = () => {
     return CvElements.map((item) => {
       return (
-        <CvItemBox key={item.id}>
+        <CvItemBox key={item.id} sx={{ transition: "all 1.2s ease" }}>
           <TimelineItem sx={{ m: "1rem 0" }}>
             <TimelineSeparator>
               <TimelineDotS>
@@ -42,11 +42,20 @@ function CvPage() {
   return (
     <SectionBox>
       <Link
-        sx={{ textDecoration: "none", m: "0.5rem", p: "15px" }}
+        sx={{
+          textDecoration: "none",
+          m: "0.5rem",
+          p: "15px",
+        }}
         href={require("../../assets/cv/Akiko_van_Dal_CV.pdf")}
         download="Akiko_van_Dal_CV"
       >
-        <LinkButton startIcon={<Download />}>download CV</LinkButton>
+        <LinkButton
+          startIcon={<Download />}
+          sx={{ textTransform: "lowercase" }}
+        >
+          download CV
+        </LinkButton>
       </Link>
       <Timeline
         sx={{

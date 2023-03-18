@@ -23,12 +23,12 @@ function NavBar() {
       title: "projects",
     },
     {
-      href: "/contact",
-      title: "contact",
-    },
-    {
       href: "/skills",
       title: "skills",
+    },
+    {
+      href: "/contact",
+      title: "contact",
     },
   ];
 
