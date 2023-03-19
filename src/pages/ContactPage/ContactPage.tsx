@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { SectionBox } from "../../GlobalStyles";
 import { FormInput, SubmitButton } from "./style";
@@ -6,7 +6,6 @@ import { FormInput, SubmitButton } from "./style";
 const ContactPage = () => {
   const form = useRef(null);
 
-  const [open, setOpen] = useState(false);
   const sendEmail = (event: React.SyntheticEvent) => {
     event.preventDefault();
 

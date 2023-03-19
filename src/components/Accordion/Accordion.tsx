@@ -28,7 +28,7 @@ function ProjectAccordion(project: Project) {
       setExpanded(isExpanded ? panel : false);
     };
   return (
-    <div style={{ margin: "1rem 0" }}>
+    <Box sx={{ m: "1rem 0" }}>
       <Box>
         {project?.tech?.backend && (
           <AccordionS
@@ -142,7 +142,7 @@ function ProjectAccordion(project: Project) {
           </AccordionS>
         )}
       </Box>
-    </div>
+    </Box>
   );
 }
 

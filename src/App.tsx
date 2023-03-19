@@ -2,7 +2,7 @@ import { CssBaseline, FormControlLabel, Radio } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import React, { useMemo, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+// import "./App.css";
 import {
   MainBox,
   AppBox,
@@ -39,12 +39,13 @@ function App() {
     []
   );
 
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+
   useEffect(() => {
     if (typeof window !== "undefined")
       setMode(window.localStorage.getItem("theme") || "light");
   }, []);
 
-  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
