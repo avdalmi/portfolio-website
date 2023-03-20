@@ -1,4 +1,4 @@
-import { FormControlLabel, RadioGroup, Box } from "@mui/material";
+import { RadioGroup, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const ThemeRadio = styled("input")(({ theme }) => ({
@@ -15,8 +15,6 @@ export const ThemeRadioChecked = styled(ThemeRadio)(({ theme }) => ({
   border: `2px solid ${theme.palette.background.default}`,
 }));
 
-export const SFormControlLabel = styled(FormControlLabel)(({ theme }) => ({}));
-
 export const ThemeRadioGroup = styled(RadioGroup)(({ theme }) => ({
   width: "200px",
 
@@ -28,7 +26,7 @@ export const ThemeRadioGroup = styled(RadioGroup)(({ theme }) => ({
   },
 }));
 
-export const ThemeRadioCont = styled(Box)(({ theme }) => ({
+export const ThemeRadioBox = styled(Box)(({ theme }) => ({
   transform: "rotate(-90deg)",
   width: "30px",
 

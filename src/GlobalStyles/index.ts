@@ -1,4 +1,4 @@
-import { AppBox, SectionBox, MainBox } from "./container/container";
+import { AppBox, SectionBox, MainBox } from "./containers/containers";
 import { ThemeRadio, ThemeRadioChecked } from "./theme/radioButton";
 import { getDesignTokens } from "./theme/theme";
 

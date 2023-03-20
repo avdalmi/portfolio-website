@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
-import React from "react";
-import NavBar from "../../components/NavBar/NavBar";
+import { NavBar } from "../../components";
 import { SideBarCont } from "./styles";
 
 function SideBar() {
@@ -15,7 +14,6 @@ function SideBar() {
       >
         <span>Akiko</span>
         <br />
-        {/* <span style={{ transition: "all 1s ease" }}>van Dal</span> */}
         <span>van Dal</span>
       </Typography>
       <NavBar />

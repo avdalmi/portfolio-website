@@ -1,7 +1,7 @@
 import { Code } from "@mui/icons-material";
-import { useLocation } from "react-router-dom";
 import { NavBarLI, NavBarLink, NavBarUL } from "./style";
 
+import { useLocation } from "react-router-dom";
 function NavBar() {
   const location = useLocation();
   const dot = <Code sx={{ height: "10px", m: "-5px" }} />;

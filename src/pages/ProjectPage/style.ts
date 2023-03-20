@@ -3,8 +3,6 @@ import { Box, Link, Typography } from "@mui/material";
 
 export const ProjectNavBox = styled(Box)(({ theme }) => ({
   margin: "1.5rem 0",
-  // transition: "all 0.5s ease",
-  [theme.breakpoints.down("sm")]: {},
 }));
 
 export const ProjectNavLink = styled(Link)(({ theme }) => ({

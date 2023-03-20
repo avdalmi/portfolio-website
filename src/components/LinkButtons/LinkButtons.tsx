@@ -1,5 +1,4 @@
 import { Box, Link } from "@mui/material";
-import React from "react";
 import { LinkButton } from "./style";
 
 function LinkButtons() {

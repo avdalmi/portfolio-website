@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { projectData } from "../../data/Project";
-import { SectionBox } from "../../GlobalStyles/container/container";
+import { SectionBox } from "../../GlobalStyles";
 import { ProjectNavBox, ProjectNavLink, ProjectNavTitle } from "./style";
 
 function ProjectPage() {

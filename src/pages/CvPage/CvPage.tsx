@@ -5,19 +5,25 @@ import {
   TimelineItem,
   TimelineSeparator,
 } from "@mui/lab";
-import { CvElements } from "../../data/CV";
-import { SectionBox } from "../../GlobalStyles/container/container";
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
 import { Link, Typography } from "@mui/material";
-import { CvItemBox, SchoolIconS, TimelineDotS, WorkIconS } from "./styles";
-import { LinkButton } from "../../components/ProjectButton/style";
 import { Download } from "@mui/icons-material";
+import { SectionBox } from "../../GlobalStyles";
+import {
+  CvItemBox,
+  DownloadButton,
+  SchoolIconS,
+  TimelineDotS,
+  WorkIconS,
+} from "./styles";
+
+import { CvElements } from "../../data/CV";
 
 function CvPage() {
   const getCvItems = () => {
     return CvElements.map((item) => {
       return (
-        <CvItemBox key={item.id} sx={{ transition: "all 1.2s ease" }}>
+        <CvItemBox key={item.id}>
           <TimelineItem sx={{ m: "1rem 0" }}>
             <TimelineSeparator>
               <TimelineDotS>
@@ -50,12 +56,7 @@ function CvPage() {
         href={require("../../assets/cv/Akiko_van_Dal_CV.pdf")}
         download="Akiko_van_Dal_CV"
       >
-        <LinkButton
-          startIcon={<Download />}
-          sx={{ textTransform: "lowercase" }}
-        >
-          download CV
-        </LinkButton>
+        <DownloadButton startIcon={<Download />}>download CV</DownloadButton>
       </Link>
       <Timeline
         sx={{

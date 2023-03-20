@@ -6,8 +6,9 @@ import {
   ListItem,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
 import { AccordionS, ExpandIcon } from "./style";
+
+import { useState } from "react";
 
 interface Project {
   tech?: {

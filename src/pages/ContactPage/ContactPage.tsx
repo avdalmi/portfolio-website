@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { SectionBox } from "../../GlobalStyles";
 import { FormInput, SubmitButton } from "./style";
+
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
   const form = useRef(null);

@@ -10,10 +10,9 @@ import {
   getDesignTokens,
 } from "./GlobalStyles";
 import {
-  ThemeRadioCont,
+  ThemeRadioBox,
   ThemeRadioGroup,
 } from "./GlobalStyles/theme/radioButton";
-
 import {
   AboutPage,
   ProjectPage,
@@ -39,7 +38,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppBox>
-        <ThemeRadioCont>
+        <ThemeRadioBox>
           <ThemeRadioGroup
             row
             onChange={(e) => {
@@ -74,7 +73,7 @@ function App() {
               }
             />
           </ThemeRadioGroup>
-        </ThemeRadioCont>
+        </ThemeRadioBox>
 
         <MainBox>
           <CssBaseline />

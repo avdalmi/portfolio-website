@@ -1,7 +1,8 @@
 import { Link, Typography } from "@mui/material";
-import { LinkButtons } from "../../components";
-import { SectionBox } from "../../GlobalStyles/container/container";
+import { SectionBox } from "../../GlobalStyles/containers/containers";
 import { AboutCont } from "./styles";
+
+import { LinkButtons } from "../../components";
 
 function AboutPage() {
   return (

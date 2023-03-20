@@ -1,9 +1,10 @@
 import { AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import { AccordionS, ExpandIcon } from "../../components/Accordion/style";
 import { SectionBox } from "../../GlobalStyles";
-import { skills } from "../../data/Project";
 import { SkillItem, SkillLink } from "./style";
+
 import { useState } from "react";
+import { skills } from "../../data/Project";
 
 interface Skill {
   name?: string;

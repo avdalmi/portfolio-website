@@ -1,11 +1,12 @@
-import { Typography } from "@mui/material";
+import { ArrowBackIos } from "@mui/icons-material";
+import { Link, Typography } from "@mui/material";
+import { SectionBox } from "../../GlobalStyles/containers/containers";
+import { BackButton, HeadingBox } from "./style";
+
+import { ProjectAccordion, ProjectButton } from "../../components";
 import { useParams } from "react-router-dom";
-import ProjectAccordion from "../../components/Accordion/Accordion";
-import ProjectButton from "../../components/ProjectButton/ProjectButton";
-import { projectData } from "../../data/Project";
-import { SectionBox } from "../../GlobalStyles/container/container";
 import { Project } from "../../types/project";
-import { HeadingBox } from "./style";
+import { projectData } from "../../data/Project";
 
 function ProjectCardPage() {
   const { id } = useParams<string>();
@@ -17,6 +18,13 @@ function ProjectCardPage() {
   return (
     <SectionBox style={{ whiteSpace: "pre-wrap" }}>
       <HeadingBox>
+        <Link href="/projects">
+          <BackButton
+            startIcon={<ArrowBackIos sx={{ height: "10px", mr: "-10px" }} />}
+          >
+            back
+          </BackButton>
+        </Link>
         <Typography variant="h2">{project?.title}</Typography>
         <Typography variant="h4">{project?.type} project</Typography>
         <Typography variant="h5">{project?.location}</Typography>
