@@ -1,6 +1,6 @@
 import { Code } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
-import { NavBarLI, NavBarLink, NavBarUL } from "./Styles";
+import { NavBarLI, NavBarLink, NavBarUL } from "./style";
 
 function NavBar() {
   const location = useLocation();

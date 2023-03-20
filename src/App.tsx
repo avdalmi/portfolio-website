@@ -1,6 +1,5 @@
 import { CssBaseline, FormControlLabel, Radio } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import React, { useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import {
@@ -26,21 +25,16 @@ import {
   SkillsPage,
 } from "./pages/index";
 
-import useLocalStorage from "./hooks.ts/useLocalStorage";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
   const [mode, setMode] = useLocalStorage("theme", "light");
 
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: (e: string) => {
-        setMode(e);
-      },
-    }),
-    []
-  );
+  const toggleColorMode = (e: string) => {
+    setMode(e);
+  };
 
-  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  const theme = createTheme(getDesignTokens(mode));
 
   return (
     <ThemeProvider theme={theme}>
@@ -49,7 +43,7 @@ function App() {
           <ThemeRadioGroup
             row
             onChange={(e) => {
-              colorMode.toggleColorMode(e.target.value);
+              toggleColorMode(e.target.value);
             }}
           >
             <FormControlLabel

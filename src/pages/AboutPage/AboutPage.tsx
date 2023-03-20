@@ -1,4 +1,5 @@
 import { Link, Typography } from "@mui/material";
+import { LinkButtons } from "../../components";
 import { SectionBox } from "../../GlobalStyles/container/container";
 import { AboutCont } from "./styles";
 
@@ -36,6 +37,7 @@ function AboutPage() {
           After graduating I started working for Building Tech Heroes as a
           software developer during their experimental start-up phase.
         </Typography>
+        <LinkButtons />
       </AboutCont>
     </SectionBox>
   );
