@@ -9,11 +9,7 @@ export const AccordionS = styled(Accordion)(({ theme }) => ({
   borderRadius: "5px",
   margin: "0.5rem 0",
 
-  "&:hover": {
-    // backgroundColor: theme.palette.text.primary,
-    // color: theme.palette.background.default,
-    // transition: "all 1s ease",
-  },
+  "&:hover": {},
   [theme.breakpoints.down("sm")]: {},
 }));
 

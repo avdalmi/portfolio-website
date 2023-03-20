@@ -1,8 +1,8 @@
 import { CssBaseline, FormControlLabel, Radio } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import React, { useMemo, useEffect } from "react";
+import React, { useMemo } from "react";
 import { Routes, Route } from "react-router-dom";
-// import "./App.css";
+import "./App.css";
 import {
   MainBox,
   AppBox,
@@ -26,13 +26,14 @@ import {
   SkillsPage,
 } from "./pages/index";
 
+import useLocalStorage from "./hooks.ts/useLocalStorage";
+
 function App() {
-  const [mode, setMode] = React.useState<string>("light");
+  const [mode, setMode] = useLocalStorage("theme", "light");
 
   const colorMode = useMemo(
     () => ({
       toggleColorMode: (e: string) => {
-        window.localStorage.setItem("theme", e);
         setMode(e);
       },
     }),
@@ -41,17 +42,16 @@ function App() {
 
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
-  useEffect(() => {
-    if (typeof window !== "undefined")
-      setMode(window.localStorage.getItem("theme") || "light");
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       <AppBox>
         <ThemeRadioCont>
-          <ThemeRadioGroup row>
+          <ThemeRadioGroup
+            row
+            onChange={(e) => {
+              colorMode.toggleColorMode(e.target.value);
+            }}
+          >
             <FormControlLabel
               value="light"
               label="light"
@@ -64,9 +64,6 @@ function App() {
                   disableRipple
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
-                  onChange={(e) => {
-                    colorMode.toggleColorMode(e.target.value);
-                  }}
                 />
               }
             />
@@ -79,9 +76,6 @@ function App() {
                   disableRipple
                   checkedIcon={<ThemeRadioChecked />}
                   icon={<ThemeRadio />}
-                  onChange={(e) => {
-                    colorMode.toggleColorMode(e.target.value);
-                  }}
                 />
               }
             />
@@ -89,7 +83,9 @@ function App() {
         </ThemeRadioCont>
 
         <MainBox>
+          <CssBaseline />
           <SideBar />
+
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

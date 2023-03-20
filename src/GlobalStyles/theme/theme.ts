@@ -1,5 +1,4 @@
 export const getDesignTokens = (mode: string) => ({
-  mode,
   ...(mode === "light"
     ? {
         palette: {

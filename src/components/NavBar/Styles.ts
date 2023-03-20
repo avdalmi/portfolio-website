@@ -6,8 +6,8 @@ export const NavBarUL = styled(List)(({ theme }) => ({
   textAlign: "left",
   padding: 0,
   margin: "1rem 0",
-  //   backgroundColor: "red",
   width: "100px",
+
   [theme.breakpoints.down("sm")]: {
     display: "flex",
     flexDirection: "column",
@@ -31,9 +31,5 @@ export const NavBarLI = styled(ListItem)(({ theme }) => ({
 export const NavBarLink = styled(Link)(({ theme }) => ({
   textDecoration: "none",
 
-  [theme.breakpoints.down("sm")]: {
-    // textAlign: "right",
-    // backgroundColor: "thistle",
-    // margin: "0 auto",
-  },
+  [theme.breakpoints.down("sm")]: {},
 }));
